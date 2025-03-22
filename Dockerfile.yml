@@ -1,4 +1,4 @@
-FROM node:20-alpine as builder
+FROM node:22-alpine as builder
 
 ENV NODE_ENV build
 
@@ -23,7 +23,7 @@ RUN npx prisma generate \
 
 # ---
 
-FROM node:20-alpine
+FROM node:22-alpine
 
 ENV NODE_ENV production
 
