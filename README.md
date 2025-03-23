@@ -5,9 +5,10 @@
 <img src="./.gitassets/capa.png" width="350px">
 
 <div data-badges>
-    <img src="https://img.shields.io/github/stars/PedroMonteiro99/Portfolio?style=for-the-badge" alt="GitHub stars" />
-    <img src="https://img.shields.io/github/forks/PedroMonteiro99/Portfolio?style=for-the-badge" alt="GitHub forks" />
-    <img src="https://img.shields.io/github/issues/PedroMonteiro99/Portfolio?style=for-the-badge" alt="GitHub issues" />
+    <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/PedroMonteiro99/Portfolio?style=for-the-badge">
+    <img alt="GitHub forks" src="https://img.shields.io/github/forks/PedroMonteiro99/Portfolio?style=for-the-badge">
+    <img alt="GitHub Issues or Pull Requests" src="https://img.shields.io/github/issues/PedroMonteiro99/Portfolio?style=for-the-badge">
+
 </div>
 
 <div data-badges>
