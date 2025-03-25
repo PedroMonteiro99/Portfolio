@@ -1,6 +1,44 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:recommended"
-  ]
+	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
+	"extends": ["config:base"],
+	"labels": ["dependencies"],
+	"schedule": ["before 11am every saturday"],
+	"rangeStrategy": "bump",
+	"automerge": true,
+	"automergeType": "branch",
+	"automergeStrategy": "rebase",
+	"commitMessagePrefix": "chore(deps): ",
+	"commitBodyTable": true,
+	"dependencyDashboard": true,
+	"dependencyDashboardAutoclose": true,
+	"configMigration": true,
+	"lockFileMaintenance": { "enabled": true },
+	"rebaseWhen": "behind-base-branch",
+	"patch": {
+		"groupName": "non-major dependencies",
+		"groupSlug": "minor-patch"
+	},
+	"minor": {
+		"groupName": "non-major dependencies",
+		"groupSlug": "minor-patch"
+	},
+	"vulnerabilityAlerts": {
+		"labels": ["security"]
+	},
+	"major": {
+		"automerge": false,
+		"dependencyDashboardApproval": true,
+		"commitMessagePrefix": "chore(deps-major): ",
+		"labels": ["dependencies", "breaking"]
+	},
+	"packageRules": [
+		{
+			"matchPackageNames": ["node"],
+			"enabled": false
+		},
+		{
+			"matchDepTypes": ["peerDependencies"],
+			"enabled": false
+		}
+	]
 }
