@@ -19,7 +19,10 @@ export default function ItemProjeto(props: ItemProjetoProps) {
 					src={props.projeto.imagens[0]}
 					alt={props.projeto.nome}
 					fill
-					objectFit="object-cover"
+					style={{
+						maxWidth: "100%",
+						objectFit: "cover",
+					}}
 				/>
 			</div>
 		</Link>

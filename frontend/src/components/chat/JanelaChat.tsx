@@ -22,8 +22,8 @@ export default function JanelaChat() {
 	}, [mensagens]);
 
 	return (
-		<div className="flex flex-col bg-zinc-300 rounded-2xl text-black overflow-hidden">
-			<div className="flex justify-between items-center bg-white p-4">
+        <div className="flex flex-col bg-zinc-300 rounded-2xl text-black overflow-hidden">
+            <div className="flex justify-between items-center bg-white p-4">
 				<h2 className="text-xl font-bold">Olá visitante</h2>
 				<IconReload
 					size={24}
@@ -31,7 +31,7 @@ export default function JanelaChat() {
 					onClick={limparMensagens}
 				/>
 			</div>
-			{mensagens.length === 0 ? (
+            {mensagens.length === 0 ? (
 				<div className="flex flex-col items-center justify-center min-h-[400px] sm:min-h-[500px]">
 					<IconMessages size={230} stroke={0.2} className="text-black/30" />
 					<span>Vamos conversar?</span>
@@ -50,13 +50,21 @@ export default function JanelaChat() {
 						);
 					})}
 					{pensando && (
-						<Image src="/pensando.gif" alt="Pensando..." width={50} height={50} />
+						<Image
+                            src="/pensando.gif"
+                            alt="Pensando..."
+                            width={50}
+                            height={50}
+                            style={{
+                                maxWidth: "100%",
+                                height: "auto"
+                            }} />
 					)}
 					<div ref={fimChatRef}></div>
 				</div>
 			)}
-			<div className="h-px bg-zinc-400 mt-4"></div>
-			<div className="flex items-center gap-2 p-1 m-4 rounded-full h-10 bg-white">
+            <div className="h-px bg-zinc-400 mt-4"></div>
+            <div className="flex items-center gap-2 p-1 m-4 rounded-full h-10 bg-white">
 				<input
 					type="text"
 					value={texto}
@@ -78,6 +86,6 @@ export default function JanelaChat() {
 					<IconSend size={18} className="text-white" />
 				</button>
 			</div>
-		</div>
-	);
+        </div>
+    );
 }

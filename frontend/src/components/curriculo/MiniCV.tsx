@@ -4,7 +4,14 @@ export default function MiniCV() {
 	return (
 		<div className="flex-1 flex gap-6 flex-col-reverse md:flex-row xl:flex-row lg:flex-col-reverse items-center md:items-start lg:items-center xl:items-start px-6 pt-6 bg-black border border-zinc-800 rounded-2xl">
 			<div className="relative min-w-72 h-64 xl:self-end">
-				<Image src="/minha-foto.png" alt="Foto de perfil" fill />
+				<Image
+					src="/minha-foto.png"
+					alt="Foto de perfil"
+					fill
+					style={{
+						maxWidth: "100%",
+					}}
+				/>
 			</div>
 			<div className="flex flex-col gap-5 self-center py-6 items-center md:items-start xl:items-start lg:items-center">
 				<div className="flex flex-col items-center md:items-start xl:items-start lg:items-center">

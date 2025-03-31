@@ -17,11 +17,19 @@ export default function BalaoMensagem(props: BalaoMensagemProps) {
 
 function BalaoEsquerdo(props: BalaoMensagemProps) {
 	return (
-		<div className="flex gap-4">
-			{!props.omitirAutor && (
-				<Image src="/chat.svg" alt="Assistente" width={40} height={40} />
+        <div className="flex gap-4">
+            {!props.omitirAutor && (
+				<Image
+                    src="/chat.svg"
+                    alt="Assistente"
+                    width={40}
+                    height={40}
+                    style={{
+                        maxWidth: "100%",
+                        height: "auto"
+                    }} />
 			)}
-			<div className={`flex flex-col ${props.omitirAutor && "pl-16"}`}>
+            <div className={`flex flex-col ${props.omitirAutor && "pl-16"}`}>
 				{!props.omitirAutor && (
 					<span className="text-xs text-zinc-600">{props.mensagem.autor}</span>
 				)}
@@ -29,8 +37,8 @@ function BalaoEsquerdo(props: BalaoMensagemProps) {
 					<ConteudoMD markdown={props.mensagem.texto} />
 				</div>
 			</div>
-		</div>
-	);
+        </div>
+    );
 }
 
 function BalaoDireito(props: BalaoMensagemProps) {

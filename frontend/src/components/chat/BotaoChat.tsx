@@ -4,13 +4,21 @@ import JanelaChat from "./JanelaChat";
 
 export default function BotaoChat() {
 	return (
-		<Popover>
-			<PopoverTrigger asChild>
+        <Popover>
+            <PopoverTrigger asChild>
 				<div className="fixed bottom-5 right-5 cursor-pointer">
-					<Image src="/chat.svg" alt="Chat" width={50} height={50} />
+					<Image
+                        src="/chat.svg"
+                        alt="Chat"
+                        width={50}
+                        height={50}
+                        style={{
+                            maxWidth: "100%",
+                            height: "auto"
+                        }} />
 				</div>
 			</PopoverTrigger>
-			<PopoverContent
+            <PopoverContent
 				side="top"
 				align="end"
 				sideOffset={10}
@@ -19,6 +27,6 @@ export default function BotaoChat() {
 			>
 				<JanelaChat />
 			</PopoverContent>
-		</Popover>
-	);
+        </Popover>
+    );
 }
